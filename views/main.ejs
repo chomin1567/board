@@ -1,0 +1,9 @@
+<h2>메인</h2>
+<% if (user) { %>
+  <p><%= user.username %>님 로그인 중</p>
+  <form method="post" action="/logout"><button>로그아웃</button></form>
+<% } else { %>
+  <a href="/login">로그인</a> | <a href="/signup">회원가입</a>
+<% } %>
+
+<p><a href="/posts">게시판 가기</a></p>

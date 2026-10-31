@@ -1,0 +1,7 @@
+<h2>글 수정</h2>
+<form method="post" action="/posts/<%= post.id %>/edit">
+  <input name="title" value="<%= post.title %>"><br>
+  <textarea name="content"><%= post.content %></textarea><br>
+  <button>저장</button>
+</form>
+<a href="/posts/<%= post.id %>">취소</a>

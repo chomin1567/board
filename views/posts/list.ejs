@@ -1,0 +1,11 @@
+<h2>게시판</h2>
+<a href="/">메인</a>
+<% if (user) { %>
+  | <a href="/posts/new">글쓰기</a>
+<% } %>
+
+<ul>
+  <% posts.forEach(p => { %>
+    <li><a href="/posts/<%= p.id %>"><%= p.title %></a> - <%= p.author %></li>
+  <% }) %>
+</ul>
